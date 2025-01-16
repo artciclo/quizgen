@@ -1,41 +1,26 @@
-# AI SDK PDF Support Example
+Este projeto é um exemplo prático que demonstra como integrar e utilizar o AI SDK com Next.js para processar mensagens em PDF enviadas para provedores de inteligência artificial, como Google ou Anthropic. Abaixo estão os principais pontos explicados:
 
-This example demonstrates how to use the [AI SDK](https://sdk.vercel.ai/docs) with [Next.js](https://nextjs.org/) with the `useObject` hook to submit PDF messages to the AI provider of your choice (Google or Anthropic).
+O que foi feito:
+Configuração Inicial do Projeto:
 
-## Deploy your own
+O projeto foi iniciado usando o template disponível no repositório oficial do GitHub, fornecido pelo Vercel Labs, através do comando create-next-app. Isso garantiu que o ambiente base estivesse configurado para suportar o AI SDK.
+Integração com Provedores de IA:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-pdf-support&env=GOOGLE_API_KEY&envDescription=API%20keys%20needed%20for%20application&envLink=google.com)
+Implementação do hook useObject do AI SDK, que permite enviar mensagens em formato PDF para os provedores de IA escolhidos.
+Configuração para trabalhar com provedores como Google e Anthropic, incluindo a obtenção e configuração das respectivas chaves de API.
+Configuração de Variáveis de Ambiente:
 
-## How to use
+As variáveis de ambiente necessárias foram configuradas seguindo o modelo no arquivo .env.example, permitindo a integração com os serviços de IA.
+Execução Local e Implantação:
 
-Run [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+O ambiente local foi configurado com todas as dependências necessárias instaladas através de npm install.
+O servidor de desenvolvimento foi iniciado com npm run dev.
+O projeto foi implantado no Vercel, garantindo uma hospedagem confiável e rápida.
+Objetivo do Projeto:
 
-```bash
-npx create-next-app --example https://github.com/vercel-labs/ai-sdk-preview-pdf-support ai-sdk-preview-pdf-support-example
-```
-
-```bash
-yarn create next-app --example https://github.com/vercel-labs/ai-sdk-preview-pdf-support ai-sdk-preview-pdf-support-example
-```
-
-```bash
-pnpm create next-app --example https://github.com/vercel-labs/ai-sdk-preview-pdf-support ai-sdk-preview-pdf-support-example
-```
-
-To run the example locally you need to:
-
-1. Sign up for accounts with the AI providers you want to use (e.g., Google).
-2. Obtain API keys for Google provider.
-3. Set the required environment variables as shown in the `.env.example` file, but in a new file called `.env`.
-4. `npm install` to install the required dependencies.
-5. `npm run dev` to launch the development server.
-
-
-## Learn More
-
-To learn more about Vercel AI SDK or Next.js take a look at the following resources:
-
-- [AI SDK docs](https://sdk.vercel.ai/docs)
-- [Vercel AI Playground](https://play.vercel.ai)
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-
+O projeto demonstra a funcionalidade de enviar documentos PDF como mensagens para serviços de IA, permitindo que os usuários explorem recursos avançados do AI SDK em conjunto com o Next.js.
+Recursos e Documentação Explorada:
+AI SDK Docs: Para entender e configurar a integração com os provedores de IA.
+Vercel AI Playground: Para explorar as funcionalidades do AI SDK.
+Next.js Documentation: Para aprofundar no framework e nas APIs utilizadas no projeto.
+Este projeto serve como um exemplo base para quem deseja trabalhar com AI SDK em aplicações Next.js, com suporte a processamento de PDFs e integração com provedores como Google.
