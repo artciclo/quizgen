@@ -231,17 +231,17 @@ export default function ChatWithFiles() {
         )}
       </Card>
       <motion.div
-        className="flex flex-row gap-4 items-center justify-between fixed bottom-6 text-xs "
+        className="flex flex-col gap-4 items-center justify-between fixed bottom-6 text-xs "
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
         <NextLink
           target="_blank"
-          href="https://github.com/vercel-labs/ai-sdk-preview-pdf-support"
+          href="https://github.com/artciclo/quizgen"
           className="flex flex-row gap-2 items-center border px-2 py-1.5 rounded-md hover:bg-zinc-100 dark:border-zinc-800 dark:hover:bg-zinc-800"
         >
           <GitIcon />
-          View Source Code
+          Acessar Repositório
         </NextLink>
 
         <NextLink
@@ -252,6 +252,22 @@ export default function ChatWithFiles() {
           <VercelIcon size={14} />
           Deploy with Vercel
         </NextLink>
+
+        {/* Footer */}
+        <footer className="mt-8 py-4 border-t border-zinc-200 dark:border-zinc-800">
+          <div className="container flex flex-row gap-2 items-center text-zinc-600 dark:text-zinc-400">
+            <p>&copy; {new Date().getFullYear()} Arthur Lima.</p>
+            <p>
+              Adaptado e copilado por{" "}
+              <a
+                href="https://github.com/artciclo"
+                className="text-blue-500 hover:underline"
+              >
+                Arthur Lima
+              </a>
+            </p>
+          </div>
+        </footer>
       </motion.div>
     </div>
   );
