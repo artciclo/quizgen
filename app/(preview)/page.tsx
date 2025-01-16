@@ -26,7 +26,7 @@ import { VercelIcon, GitIcon } from "@/components/icons";
 export default function ChatWithFiles() {
   const [files, setFiles] = useState<File[]>([]);
   const [questions, setQuestions] = useState<z.infer<typeof questionsSchema>>(
-    [],
+    []
   );
   const [isDragging, setIsDragging] = useState(false);
   const [title, setTitle] = useState<string>();
@@ -53,14 +53,14 @@ export default function ChatWithFiles() {
 
     if (isSafari && isDragging) {
       toast.error(
-        "Safari does not support drag & drop. Please use the file picker.",
+        "Safari does not support drag & drop. Please use the file picker."
       );
       return;
     }
 
     const selectedFiles = Array.from(e.target.files || []);
     const validFiles = selectedFiles.filter(
-      (file) => file.type === "application/pdf" && file.size <= 5 * 1024 * 1024,
+      (file) => file.type === "application/pdf" && file.size <= 5 * 1024 * 1024
     );
     console.log(validFiles);
 
@@ -87,7 +87,7 @@ export default function ChatWithFiles() {
         name: file.name,
         type: file.type,
         data: await encodeFileAsBase64(file),
-      })),
+      }))
     );
     submit({ files: encodedFiles });
     const generatedTitle = await generateQuizTitle(encodedFiles[0].name);
@@ -157,8 +157,8 @@ export default function ChatWithFiles() {
               PDF Quiz Generator
             </CardTitle>
             <CardDescription className="text-base">
-              Upload a PDF to generate an interactive quiz based on its content
-              using the <Link href="https://sdk.vercel.ai">AI SDK</Link> and{" "}
+              Envie um PDF para gerar um quiz interativo baseado em seu conteúdo
+              usando o <Link href="https://sdk.vercel.ai">AI SDK</Link> e{" "}
               <Link href="https://sdk.vercel.ai/providers/ai-sdk-providers/google-generative-ai">
                 Google&apos;s Gemini Pro
               </Link>
@@ -184,7 +184,7 @@ export default function ChatWithFiles() {
                     {files[0].name}
                   </span>
                 ) : (
-                  <span>Drop your PDF here or click to browse.</span>
+                  <span>Arraste seu PDF aqui ou pesquise no browser.</span>
                 )}
               </p>
             </div>
@@ -196,10 +196,10 @@ export default function ChatWithFiles() {
               {isLoading ? (
                 <span className="flex items-center space-x-2">
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Generating Quiz...</span>
+                  <span>Gerando o Quiz...</span>
                 </span>
               ) : (
-                "Generate Quiz"
+                "Gerar Quiz"
               )}
             </Button>
           </form>
@@ -208,7 +208,7 @@ export default function ChatWithFiles() {
           <CardFooter className="flex flex-col space-y-4">
             <div className="w-full space-y-1">
               <div className="flex justify-between text-sm text-muted-foreground">
-                <span>Progress</span>
+                <span>Progresso</span>
                 <span>{Math.round(progress)}%</span>
               </div>
               <Progress value={progress} className="h-2" />
@@ -222,8 +222,8 @@ export default function ChatWithFiles() {
                 />
                 <span className="text-muted-foreground text-center col-span-4 sm:col-span-2">
                   {partialQuestions
-                    ? `Generating question ${partialQuestions.length + 1} of 4`
-                    : "Analyzing PDF content"}
+                    ? `Gerando questão ${partialQuestions.length + 1} de 4`
+                    : "Analisando o PDF"}
                 </span>
               </div>
             </div>

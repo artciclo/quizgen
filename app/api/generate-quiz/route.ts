@@ -14,14 +14,14 @@ export async function POST(req: Request) {
       {
         role: "system",
         content:
-          "You are a teacher. Your job is to take a document, and create a multiple choice test (with 4 questions) based on the content of the document. Each option should be roughly equal in length.",
+          "Você é um professor. Seu trabalho é pegar um documento e criar um teste de múltipla escolha (com 4 perguntas) baseado no conteúdo do documento. Cada opção deve ter aproximadamente o mesmo comprimento.",
       },
       {
         role: "user",
         content: [
           {
             type: "text",
-            text: "Create a multiple choice test based on this document.",
+            text: "Crie um teste de múltipla escolha (em portuges) baseado neste documento.",
           },
           {
             type: "file",
